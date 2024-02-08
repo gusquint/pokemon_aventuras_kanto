@@ -90,11 +90,7 @@ def stats_from_nature(nature, stat):
             return 25
     else:
         return 25
-  
-
-file_path = 'pokemon.csv'  # Replace with the actual path to the CSV file
-pokemon_result_dict = read_csv_to_dict(file_path)
-
+    
 
 class Pokemon:
     def __init__(self, name, level, nature=""):
@@ -149,20 +145,17 @@ Health points {poke.health_points}.  Power points {poke.power_points}.
             self.speed  += int(stats_from_nature(self.nature, "Velocidad")/5)
 
 
-    
-    
+if __name__ == "__main__":
+    file_path = 'pokemon.csv'  # Replace with the actual path to the CSV file
+    pokemon_result_dict = read_csv_to_dict(file_path)
+    mon=input("What is the pokemon? >>>")
+    lvl=input("What level is the pokemon? >>>")
+    naturaleza=input("What is the nature of the pokemon? >>>")
 
+    poke = Pokemon(mon, lvl, naturaleza)
+    poke.level_up()
 
-
-
-mon=input("What is the pokemon? >>>")
-lvl=input("What level is the pokemon? >>>")
-naturaleza=input("What is the nature of the pokemon? >>>")
-
-poke = Pokemon(mon, lvl, naturaleza)
-poke.level_up()
-
-print(poke)
+    print(poke)
 
 
 
