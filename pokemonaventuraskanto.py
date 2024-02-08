@@ -78,9 +78,6 @@ tipos_pokemon = {
 }
 
 
-
-
-
 def stats_from_nature(nature, stat):
     changes = natures.get(nature)    
     if len(changes) == 2:
@@ -89,6 +86,8 @@ def stats_from_nature(nature, stat):
             return 35
         elif stat == negative_change[1:]:
             return 15
+        else:
+            return 25
     else:
         return 25
   
