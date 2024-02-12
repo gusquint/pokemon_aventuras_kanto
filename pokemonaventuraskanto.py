@@ -57,25 +57,25 @@ natures={"Fuerte":("Neutra"),
 
 
 tipos_pokemon = {
-    "Acero": {"Acero": 0.5, "Agua": 0.5, "Electrico": 0.5, "Fuego": 0.5, "Hada": 2.0, "Hielo": 2.0, "Roca": 2.0},
-    "Agua": {"Agua": 0.5, "Dragon": 0.5, "Electrico": 0.5, "Fuego": 2.0, "Planta": 0.5, "Roca": 2.0, "Tierra": 0.5},
-    "Bicho": {"Acero": 0.5, "Fantasma": 0.5, "Lucha": 0.5, "Planta": 0.5, "Psiquico": 0.5, "Siniestro": 2.0, "Tierra": 0.5},
-    "Dragon": {"Agua": 0.5, "Dragon": 2.0, "Electrico": 0.5, "Fuego": 0.5, "Planta": 0.5},
-    "Electrico": {"Electrico": 0.5, "Normal": 0.5, "Tierra": 0.0, "Volador": 0.5},
-    "Fantasma": {"Bicho": 0.5, "Fantasma": 0.5, "Siniestro": 2.0, "Veneno": 0.5},
-    "Fuego": {"Bicho": 2.0, "Fuego": 0.5, "Hielo": 0.5, "Planta": 0.5, "Roca": 0.5, "Agua": 0.5},
-    "Hada": {"Acero": 2.0, "Bicho": 0.5, "Dragon": 0.0, "Hada": 0.5, "Lucha": 0.5, "Siniestro": 0.5},
-    "Hielo": {"Fuego": 0.5, "Hielo": 0.5, "Planta": 2.0, "Tierra": 2.0},
-    "Lucha": {"Acero": 2.0, "Bicho": 0.5, "Lucha": 0.5, "Normal": 2.0, "Roca": 0.5, "Siniestro": 0.5},
-    "Normal": {"Fantasma": 0.5, "Normal": 0.5},
-    "Planta": {"Agua": 2.0, "Electrico": 0.5, "Fuego": 0.5, "Planta": 0.5, "Roca": 2.0, "Tierra": 0.5},
-    "Psiquico": {"Bicho": 2.0, "Lucha": 0.5, "Psiquico": 0.5, "Siniestro": 2.0},
-    "Roca": {"Fuego": 0.5, "Normal": 0.5, "Planta": 2.0, "Roca": 0.5, "Veneno": 0.5, "Volador": 0.5},
-    "Siniestro": {"Fantasma": 2.0, "Psiquico": 0.0, "Siniestro": 0.5},
-    "Tierra": {"Agua": 2.0, "Electrico": 0.0, "Hielo": 2.0, "Planta": 0.5, "Roca": 0.5, "Veneno": 0.5},
-    "Veneno": {"Bicho": 0.5, "Planta": 0.5, "Psiquico": 2.0, "Veneno": 0.5, "Tierra": 0.5},
-    "Volador": {"Bicho": 0.5, "Lucha": 0.5, "Planta": 0.5, "Tierra": 0.0, "Volador": 0.5},
-}
+    'Acero': {'Acero': 0.5, 'Agua': 0.5, 'Bicho': 1.0, 'Dragon': 1.0, 'Electrico': 0.5, 'Fantasma': 1.0, 'Fuego': 0.5, 'Hada': 2.0, 'Hielo': 2.0, 'Lucha': 1.0, 'Normal': 1.0, 'Planta': 1.0, 'Psiquico': 1.0, 'Roca': 2.0, 'Siniestro': 1.0, 'Tierra': 1.0, 'Veneno': 1.0, 'Volador': 1.0}, 
+    'Agua': {'Acero': 1.0, 'Agua': 0.5, 'Bicho': 1.0, 'Dragon': 0.5, 'Electrico': 1.0, 'Fantasma': 1.0, 'Fuego': 2.0, 'Hada': 1.0, 'Hielo': 1.0, 'Lucha': 1.0, 'Normal': 1.0, 'Planta': 0.5, 'Psiquico': 1.0, 'Roca': 2.0, 'Siniestro': 1.0, 'Tierra': 2.0, 'Veneno': 1.0, 'Volador': 1.0}, 
+    'Bicho': {'Acero': 0.5, 'Agua': 1.0, 'Bicho': 1.0, 'Dragon': 1.0, 'Electrico': 1.0, 'Fantasma': 0.5, 'Fuego': 0.5, 'Hada': 0.5, 'Hielo': 1.0, 'Lucha': 0.5, 'Normal': 1.0, 'Planta': 2.0, 'Psiquico': 2.0, 'Roca': 1.0, 'Siniestro': 2.0, 'Tierra': 1.0, 'Veneno': 0.5, 'Volador': 0.5}, 
+    'Dragon': {'Acero': 0.5, 'Agua': 1.0, 'Bicho': 1.0, 'Dragon': 2.0, 'Electrico': 1.0, 'Fantasma': 1.0, 'Fuego': 1.0, 'Hada': 0.0, 'Hielo': 1.0, 'Lucha': 1.0, 'Normal': 1.0, 'Planta': 1.0, 'Psiquico': 1.0, 'Roca': 1.0, 'Siniestro': 1.0, 'Tierra': 1.0, 'Veneno': 1.0, 'Volador': 1.0}, 
+    'Electrico': {'Acero': 1.0, 'Agua': 2.0, 'Bicho': 1.0, 'Dragon': 0.5, 'Electrico': 0.5, 'Fantasma': 1.0, 'Fuego': 1.0, 'Hada': 1.0, 'Hielo': 1.0, 'Lucha': 1.0, 'Normal': 1.0, 'Planta': 0.5, 'Psiquico': 1.0, 'Roca': 1.0, 'Siniestro': 1.0, 'Tierra': 0.0, 'Veneno': 1.0, 'Volador': 2.0}, 
+    'Fantasma': {'Acero': 1.0, 'Agua': 1.0, 'Bicho': 1.0, 'Dragon': 1.0, 'Electrico': 1.0, 'Fantasma': 2.0, 'Fuego': 1.0, 'Hada': 1.0, 'Hielo': 1.0, 'Lucha': 1.0, 'Normal': 0.0, 'Planta': 1.0, 'Psiquico': 2.0, 'Roca': 1.0, 'Siniestro': 0.5, 'Tierra': 1.0, 'Veneno': 1.0, 'Volador': 1.0}, 
+    'Fuego': {'Acero': 2.0, 'Agua': 0.5, 'Bicho': 2.0, 'Dragon': 0.5, 'Electrico': 1.0, 'Fantasma': 1.0, 'Fuego': 0.5, 'Hada': 1.0, 'Hielo': 2.0, 'Lucha': 1.0, 'Normal': 1.0, 'Planta': 2.0, 'Psiquico': 1.0, 'Roca': 0.5, 'Siniestro': 1.0, 'Tierra': 1.0, 'Veneno': 1.0, 'Volador': 1.0}, 
+    'Hada': {'Acero': 0.5, 'Agua': 1.0, 'Bicho': 1.0, 'Dragon': 2.0, 'Electrico': 1.0, 'Fantasma': 1.0, 'Fuego': 0.5, 'Hada': 1.0, 'Hielo': 1.0, 'Lucha': 2.0, 'Normal': 1.0, 'Planta': 1.0, 'Psiquico': 1.0, 'Roca': 1.0, 'Siniestro': 2.0, 'Tierra': 1.0, 'Veneno': 0.5, 'Volador': 1.0}, 
+    'Hielo': {'Acero': 0.5, 'Agua': 0.5, 'Bicho': 1.0, 'Dragon': 2.0, 'Electrico': 1.0, 'Fantasma': 1.0, 'Fuego': 0.5, 'Hada': 1.0, 'Hielo': 0.5, 'Lucha': 1.0, 'Normal': 1.0, 'Planta': 2.0, 'Psiquico': 1.0, 'Roca': 1.0, 'Siniestro': 1.0, 'Tierra': 2.0, 'Veneno': 1.0, 'Volador': 2.0}, 
+    'Lucha': {'Acero': 2.0, 'Agua': 1.0, 'Bicho': 0.5, 'Dragon': 1.0, 'Electrico': 1.0, 'Fantasma': 0.0, 'Fuego': 1.0, 'Hada': 0.5, 'Hielo': 2.0, 'Lucha': 1.0, 'Normal': 2.0, 'Planta': 1.0, 'Psiquico': 0.5, 'Roca': 2.0, 'Siniestro': 2.0, 'Tierra': 1.0, 'Veneno': 0.5, 'Volador': 0.5}, 
+    'Normal': {'Acero': 0.5, 'Agua': 1.0, 'Bicho': 1.0, 'Dragon': 1.0, 'Electrico': 1.0, 'Fantasma': 0.0, 'Fuego': 1.0, 'Hada': 1.0, 'Hielo': 1.0, 'Lucha': 1.0, 'Normal': 1.0, 'Planta': 1.0, 'Psiquico': 1.0, 'Roca': 0.5, 'Siniestro': 1.0, 'Tierra': 1.0, 'Veneno': 1.0, 'Volador': 1.0}, 
+    'Planta': {'Acero': 0.5, 'Agua': 2.0, 'Bicho': 0.5, 'Dragon': 0.5, 'Electrico': 1.0, 'Fantasma': 1.0, 'Fuego': 0.5, 'Hada': 1.0, 'Hielo': 1.0, 'Lucha': 1.0, 'Normal': 1.0, 'Planta': 0.5, 'Psiquico': 1.0, 'Roca': 2.0, 'Siniestro': 1.0, 'Tierra': 2.0, 'Veneno': 0.5, 'Volador': 0.5}, 
+    'Psiquico': {'Acero': 0.5, 'Agua': 1.0, 'Bicho': 1.0, 'Dragon': 1.0, 'Electrico': 1.0, 'Fantasma': 1.0, 'Fuego': 1.0, 'Hada': 1.0, 'Hielo': 1.0, 'Lucha': 2.0, 'Normal': 1.0, 'Planta': 1.0, 'Psiquico': 0.5, 'Roca': 1.0, 'Siniestro': 0.0, 'Tierra': 1.0, 'Veneno': 2.0, 'Volador': 1.0}, 
+    'Roca': {'Acero': 0.5, 'Agua': 1.0, 'Bicho': 2.0, 'Dragon': 1.0, 'Electrico': 1.0, 'Fantasma': 1.0, 'Fuego': 2.0, 'Hada': 1.0, 'Hielo': 2.0, 'Lucha': 0.5, 'Normal': 1.0, 'Planta': 1.0, 'Psiquico': 1.0, 'Roca': 1.0, 'Siniestro': 1.0, 'Tierra': 0.5, 'Veneno': 1.0, 'Volador': 2.0},
+    'Siniestro': {'Acero': 1.0, 'Agua': 1.0, 'Bicho': 1.0, 'Dragon': 1.0, 'Electrico': 1.0, 'Fantasma': 2.0, 'Fuego': 1.0, 'Hada': 0.5, 'Hielo': 1.0, 'Lucha': 0.5, 'Normal': 1.0, 'Planta': 1.0, 'Psiquico': 2.0, 'Roca': 1.0, 'Siniestro': 0.5, 'Tierra': 1.0, 'Veneno': 1.0, 'Volador': 1.0}, 
+    'Tierra': {'Acero': 2.0, 'Agua': 1.0, 'Bicho': 0.5, 'Dragon': 1.0, 'Electrico': 2.0, 'Fantasma': 1.0, 'Fuego': 2.0, 'Hada': 1.0, 'Hielo': 1.0, 'Lucha': 1.0, 'Normal': 1.0, 'Planta': 0.5, 'Psiquico': 1.0, 'Roca': 2.0, 'Siniestro': 1.0, 'Tierra': 1.0, 'Veneno': 2.0, 'Volador': 0.0}, 
+    'Veneno': {'Acero': 0.0, 'Agua': 1.0, 'Bicho': 1.0, 'Dragon': 1.0, 'Electrico': 1.0, 'Fantasma': 0.5, 'Fuego': 1.0, 'Hada': 2.0, 'Hielo': 1.0, 'Lucha': 1.0, 'Normal': 1.0, 'Planta': 2.0, 'Psiquico': 1.0, 'Roca': 0.5, 'Siniestro': 1.0, 'Tierra': 0.5, 'Veneno': 0.5, 'Volador': 1.0}, 
+    'Volador': {'Acero': 0.5, 'Agua': 1.0, 'Bicho': 2.0, 'Dragon': 1.0, 'Electrico': 0.5, 'Fantasma': 1.0, 'Fuego': 1.0, 'Hada': 1.0, 'Hielo': 1.0, 'Lucha': 2.0, 'Normal': 1.0, 'Planta': 2.0, 'Psiquico': 1.0, 'Roca': 0.5, 'Siniestro': 1.0, 'Tierra': 1.0, 'Veneno': 1.0, 'Volador': 1.0}
+    }
 
 
 def stats_from_nature(nature, stat):
