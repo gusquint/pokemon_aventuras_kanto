@@ -93,9 +93,19 @@ def stats_from_nature(nature, stat):
     
 
 class Pokemon:
-    def __init__(self, pokemon_result_dict, name, level, nature=""):
-        self.name = pokemon_result_dict[name.lower()]['Pokemon']
-        self.level = int(level) 
+    def __init__(self, pokemon_result_dict, name="", level="", nature=""):
+
+        if name == "":
+            # Choose a random pokemon if there is none
+            self.name = random.choice(list(pokemon_result_dict.keys()))
+        else:
+            self.name = pokemon_result_dict[name.lower()]['Pokemon']
+
+        if name == "":
+            # Choose a random number between 5 and 100 if there is no level
+            self.level = random.randint(5, 100)
+        else:
+            self.level = int(level) 
 
         if nature == "":
             # Choose a random nature if there is none
