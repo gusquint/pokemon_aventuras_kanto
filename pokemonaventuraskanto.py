@@ -42,6 +42,63 @@ def random_pokemon():
     return poke
 
 
+def sort_numbers(input_str):
+    # Convert the input string to a list of integers
+    numbers = [int(num) for num in input_str]
+
+    # Sort the numbers in ascending order
+    sorted_numbers = sorted(numbers)
+
+    # Create a dictionary with keys "B", "I", and "A" and their corresponding values
+    result_dict = {"B": sorted_numbers[0], "I": sorted_numbers[1], "A": sorted_numbers[2]}
+
+    return result_dict
+
+
+def calculo_daño_pokemon(movimientos_result_dict, mon_attacking, mon_defending, move, dados):
+    dados_dict = sort_numbers(dados)
+    damage_string = movimientos_result_dict[move.lower()]['Damage']
+
+    if damage_string == "-":
+        return 0
+    if damage_string == "Variable":
+        return 0
+        
+    # Initialize the total damage
+    total_damage = 0    
+
+    # Process the damage_string
+    components = damage_string.split('+')
+    for component in components:
+        if component.isdigit():
+            total_damage += int(component)
+        else:
+            if 'A' in component:
+                total_damage += dados_dict['A']
+            if 'B' in component:
+                total_damage += dados_dict['B']
+            if 'I' in component:
+                total_damage += dados_dict['I']
+            if component[0].isdigit():
+                total_damage *= int(component[0])
+
+    tipo_movimiento = movimientos_result_dict[move.lower()]['Tipo']
+    
+
+    return total_damage
+
+
+def daño_pokemon():
+    file_path = 'movimientos pokemon.csv'  # Replace with the actual path to the CSV file
+    movimientos_result_dict = read_csv_to_dict(file_path)
+    mon_attacking = input("What pokemon is attacking? >>>")
+    mon_defending = input("What pokemon is defending? >>>")
+    move = input(f"What movement is {mon_attacking} using? >>>")
+    dados = input("Toss 3d6 and type the results >>>")
+    damage = calculo_daño_pokemon(movimientos_result_dict, mon_attacking, mon_defending, move, dados)
+    return damage
+
+
 natures={"Fuerte":("Neutra"),
         "Osada":("+Defensa","-Ataque"),
         "Modesta":("+At. Especial","-Ataque"),
@@ -177,7 +234,7 @@ if __name__ == "__main__":
     if user == 1:
         print(random_pokemon())
     elif user == 2:
-        print("Soon")
+        print(daño_pokemon())
     
     
     
