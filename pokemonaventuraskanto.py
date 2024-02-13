@@ -93,7 +93,7 @@ def stats_from_nature(nature, stat):
     
 
 class Pokemon:
-    def __init__(self, name, level, nature=""):
+    def __init__(self, pokemon_result_dict, name, level, nature=""):
         self.name = pokemon_result_dict[name.lower()]['Pokemon']
         self.level = int(level) 
 
@@ -118,9 +118,9 @@ class Pokemon:
 
     def __str__(self):
         return  f'''
-This level {poke.level} {poke.name} is a {poke.type1}/{poke.type2} type Pokemon with a nature of {self.nature} {natures.get(self.nature)}.  Its statistics are as follows: 
-Attack {poke.attack}.  Special attack {poke.special_attack}.  Defence {poke.defense}.  Special defense {poke.special_defense}. and Speed {poke.speed}  (After nature bonuses).  
-Health points {poke.health_points}.  Power points {poke.power_points}.
+This level {self.level} {self.name} is a {self.type1}/{self.type2} type Pokemon with a nature of {self.nature} {natures.get(self.nature)}.  Its statistics are as follows: 
+Attack {self.attack}.  Special attack {self.special_attack}.  Defence {self.defense}.  Special defense {self.special_defense}. and Speed {self.speed}  (After nature bonuses).  
+Health points {self.health_points}.  Power points {self.power_points}.
 '''
 
     def level_up(self):
@@ -145,17 +145,34 @@ Health points {poke.health_points}.  Power points {poke.power_points}.
             self.speed  += int(stats_from_nature(self.nature, "Velocidad")/5)
 
 
-if __name__ == "__main__":
+def random_pokemon():
     file_path = 'pokemon.csv'  # Replace with the actual path to the CSV file
     pokemon_result_dict = read_csv_to_dict(file_path)
     mon=input("What is the pokemon? >>>")
     lvl=input("What level is the pokemon? >>>")
     naturaleza=input("What is the nature of the pokemon? >>>")
 
-    poke = Pokemon(mon, lvl, naturaleza)
+    poke = Pokemon(pokemon_result_dict, mon, lvl, naturaleza)
     poke.level_up()
 
-    print(poke)
+    return poke
+
+    
+
+
+
+
+
+if __name__ == "__main__":
+    
+    user = int(input("Type 1 to create a random pokemon or 2 to acces the damage calculator>>>"))
+    if user == 1:
+        print(random_pokemon())
+    elif user == 2:
+        print("Soon")
+    
+    
+    
 
 
 
