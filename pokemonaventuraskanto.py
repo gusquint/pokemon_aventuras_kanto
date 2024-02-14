@@ -18,13 +18,13 @@ def read_csv_to_dict(file_path):
 
 def roll_three_dice(input_str=""):
 
-    if input_str == "":
-        # Convert the input string to a list of integers
-        dice_results = [int(num) for num in input_str]
-
-    else:
+    if input_str == "":        
         # Roll three six-sided dice
         dice_results = [random.randint(1, 6) for _ in range(3)]
+
+    else:
+        # Convert the input string to a list of integers
+        dice_results = [int(num) for num in input_str]
     
     # Organize the results from lowest to highest
     sorted_results = sorted(dice_results)
@@ -47,7 +47,11 @@ def random_pokemon():
     return poke
 
 
-def calculo_daño_pokemon(movimientos_result_dict, mon_attacking, mon_defending, move, dados):
+def calculo_daño_pokemon(mon_attacking, mon_defending, move, dados):
+
+    file_path = 'movimientos pokemon.csv'  # Replace with the actual path to the CSV file
+    movimientos_result_dict = read_csv_to_dict(file_path)
+
     dados_dict = roll_three_dice(dados)
     damage_string = movimientos_result_dict[move.lower()]['Damage']
 
@@ -81,13 +85,12 @@ def calculo_daño_pokemon(movimientos_result_dict, mon_attacking, mon_defending,
 
 
 def daño_pokemon():
-    file_path = 'movimientos pokemon.csv'  # Replace with the actual path to the CSV file
-    movimientos_result_dict = read_csv_to_dict(file_path)
-    mon_attacking = input("What pokemon is attacking? >>>")
-    mon_defending = input("What pokemon is defending? >>>")
-    move = input(f"What movement is {mon_attacking} using? >>>")
+    
+    mon_attacking = Pokemon(input("What pokemon is attacking? >>>"))
+    mon_defending = Pokemon(input("What pokemon is defending? >>>"))
+    move = input(f"What movement is {mon_attacking.name} using? >>>")
     dados = input("Toss 3d6 and type the results >>>")
-    damage = calculo_daño_pokemon(movimientos_result_dict, mon_attacking, mon_defending, move, dados)
+    damage = calculo_daño_pokemon(mon_attacking, mon_defending, move, dados)
     return damage
 
 
