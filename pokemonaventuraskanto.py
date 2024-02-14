@@ -69,12 +69,9 @@ def calculo_daño_pokemon(mon_attacking, mon_defending, move, dados):
         if component.isdigit():
             total_damage += int(component)
         else:
-            if 'A' in component:
-                total_damage += dados_dict['A']
-            if 'B' in component:
-                total_damage += dados_dict['B']
-            if 'I' in component:
-                total_damage += dados_dict['I']
+            for letter in ["B", "I", "A"]:
+                if letter in component:
+                    total_damage += dados_dict[letter]
             if component[0].isdigit():
                 total_damage *= int(component[0])
 
