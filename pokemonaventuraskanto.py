@@ -36,13 +36,12 @@ def roll_three_dice(input_str=""):
 
 
 def random_pokemon():
-    file_path = 'pokemon.csv'  # Replace with the actual path to the CSV file
-    pokemon_result_dict = read_csv_to_dict(file_path)
+    
     mon=input("What is the pokemon? >>>")
     lvl=input("What level is the pokemon? >>>")
     naturaleza=input("What is the nature of the pokemon? >>>")
 
-    poke = Pokemon(pokemon_result_dict, mon, lvl, naturaleza)
+    poke = Pokemon(mon, lvl, naturaleza)
     poke.level_up()
 
     return poke
@@ -156,7 +155,10 @@ def stats_from_nature(nature, stat):
     
 
 class Pokemon:
-    def __init__(self, pokemon_result_dict, name="", level="", nature=""):
+    def __init__(self, name="", level="", nature=""):
+        
+        file_path = 'pokemon.csv'  # Replace with the actual path to the CSV file
+        pokemon_result_dict = read_csv_to_dict(file_path)
 
         if name == "":
             # Choose a random pokemon if there is none
