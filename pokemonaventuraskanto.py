@@ -75,9 +75,25 @@ def calculo_daño_pokemon(mon_attacking, mon_defending, move, dados):
             if component[0].isdigit():
                 total_damage *= int(component[0])
 
+    # Determine STAB
     tipo_movimiento = movimientos_result_dict[move.lower()]['Tipo']
-    
+    if tipo_movimiento == mon_attacking.type1 or tipo_movimiento == mon_attacking.type2:
+        total_damage += 1 + mon_attacking.level // 10
 
+    # Determine critical hit        
+    # Get the first value in dados_dict
+    first_value = next(iter(dados_dict.values()), None)
+    # Check if all values are equal to the first value
+    if all(value == first_value for value in dados_dict.values()):
+        total_damage *= 2
+
+    # Multiply damage according to the effectiveness
+    total_damage *= tipos_pokemon.get(tipo_movimiento).get(mon_defending.type1)
+    if mon_defending.type2:
+        total_damage *= tipos_pokemon.get(tipo_movimiento).get(mon_defending.type2)
+
+    
+    print("nivel del pokemon:",mon_attacking.level)
     return total_damage
 
 
@@ -88,7 +104,7 @@ def daño_pokemon():
     move = input(f"What movement is {mon_attacking.name} using? >>>")
     dados = input("Toss 3d6 and type the results >>>")
     damage = calculo_daño_pokemon(mon_attacking, mon_defending, move, dados)
-    return damage
+    return f"{mon_attacking.name} hits {mon_defending.name} using {move} for {damage} points of damage"
 
 
 natures={"Fuerte":("Neutra"),
@@ -166,7 +182,7 @@ class Pokemon:
         else:
             self.name = pokemon_result_dict[name.lower()]['Pokemon']
 
-        if name == "":
+        if level == "":
             # Choose a random number between 5 and 100 if there is no level
             self.level = random.randint(5, 100)
         else:
