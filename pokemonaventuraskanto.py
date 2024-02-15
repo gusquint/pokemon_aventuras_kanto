@@ -1,5 +1,6 @@
 import csv
 import random
+import math
 
 
 def read_csv_to_dict(file_path):
@@ -35,7 +36,7 @@ def roll_three_dice(input_str=""):
     return result_dict
 
 
-def random_pokemon():
+def create_pokemon():
     
     mon=input("What is the pokemon? >>>")
     lvl=input("What level is the pokemon? >>>")
@@ -48,34 +49,32 @@ def random_pokemon():
 
 def calculo_daño_pokemon(mon_attacking, mon_defending, move, dados):
 
-    file_path = 'movimientos pokemon.csv'  # Replace with the actual path to the CSV file
-    movimientos_result_dict = read_csv_to_dict(file_path)
-
     dados_dict = roll_three_dice(dados)
-    damage_string = movimientos_result_dict[move.lower()]['Damage']
 
-    if damage_string == "-":
+    if move.damage == "-":
         return 0
-    if damage_string == "Variable":
+    if move.damage == "Variable":
         return 0
         
     # Initialize the total damage
     total_damage = 0    
 
     # Process the damage_string
-    components = damage_string.split('+')
+    components = move.damage.split('+')
     for component in components:
-        if component.isdigit():
+        if component.isnumeric():
             total_damage += int(component)
         else:
             for letter in ["B", "I", "A"]:
                 if letter in component:
                     total_damage += dados_dict[letter]
-            if component[0].isdigit():
-                total_damage *= int(component[0])
+            
+            multiplicative_component = "".join(char for char in component if char not in "BIA")
+            if multiplicative_component != "":
+                total_damage *= int(multiplicative_component)
 
     # Determine STAB
-    tipo_movimiento = movimientos_result_dict[move.lower()]['Tipo'].strip()
+    tipo_movimiento = move.type.strip()
     if tipo_movimiento == mon_attacking.type1 or tipo_movimiento == mon_attacking.type2:
         total_damage += 1 + mon_attacking.level // 10
 
@@ -86,36 +85,53 @@ def calculo_daño_pokemon(mon_attacking, mon_defending, move, dados):
     if all(value == first_value for value in dados_dict.values()):
         total_damage *= 2
 
-    # Multiply damage according to the effectiveness
+    # Multiply damage according to the effectiveness and round the result up
     total_damage *= tipos_pokemon.get(tipo_movimiento).get(mon_defending.type1)
     if mon_defending.type2:
         total_damage *= tipos_pokemon.get(tipo_movimiento).get(mon_defending.type2)
+    total_damage = math.ceil(total_damage)
 
     # add attacker stats and substract defender stats
-    clase_movimiento = movimientos_result_dict[move.lower()]['Movimiento'].strip()
-    if clase_movimiento == "Fisico":
+    forma_movimiento = move.form.strip()
+    if forma_movimiento == "Fisico":
         total_damage += mon_attacking.attack // 10
         total_damage -= mon_defending.defense // 10
-    elif clase_movimiento == "Especial":
+    elif forma_movimiento == "Especial":
         total_damage += mon_attacking.special_attack // 10
         total_damage -= mon_defending.special_defense // 10
+
+    # Check damage is positive or cero
+    if total_damage < 0:
+        total_damage = 0
 
     return total_damage
 
 
-def daño_pokemon():
-    
-    print("***ATTACKING POKEMON***")
-    mon_attacking = random_pokemon()
+def batalla_pokemon(mon_attacking, mon_defending):
 
-    print("***DEFENDING POKEMON***")
-    mon_defending = random_pokemon()
-
-    move = input(f"What movement is {mon_attacking.name} using? >>>")
+    move = Move(input(f"What movement is {mon_attacking.name} using? >>>"))
     dados = input("Toss 3d6 and type the results >>>")
     damage = calculo_daño_pokemon(mon_attacking, mon_defending, move, dados)
 
-    return f"{mon_attacking.name} hits {mon_defending.name} using {move} for {damage} points of damage"
+    # Update the values of pp and hp of the attacker and defender
+    if isinstance(move.power_points, int):
+        mon_attacking.power_points -= move.power_points
+    mon_defending.health_points -= damage
+
+    # Print the result of the hit
+    print(f"{mon_attacking.name} hits {mon_defending.name} using {move.name} for {damage} points of damage")
+    print("Here are the results of the battle so far: ")
+    print(f"{mon_attacking.name} has {mon_attacking.health_points} HP and {mon_attacking.power_points} PP")
+    print(f"{mon_defending.name} has {mon_defending.health_points} HP and {mon_defending.power_points} PP")
+
+    # Check if the defender can continue fighting
+    if mon_defending.health_points <= 0:
+        print (f"{mon_defending.name} has fainted.  {mon_attacking.name} has won")
+    else:
+        battle = input("Continue with the battle? (Y / N) >>>").lower()
+        if battle == "y":
+            batalla_pokemon(mon_defending, mon_attacking)
+
 
 
 natures={"Fuerte":("Neutra"),
@@ -262,6 +278,29 @@ Health points {self.health_points}.  Power points {self.power_points}.
             self.speed  += int(stats_from_nature(self.nature, "Velocidad")/5)
 
 
+class Move:
+    def __init__(self, name=""):
+        
+        file_path = 'movimientos pokemon.csv'  # Replace with the actual path to the CSV file
+        movimientos_result_dict = read_csv_to_dict(file_path)
+
+        if name == "":
+            # Choose a random move if there is none
+            self.name = random.choice(list(movimientos_result_dict.keys()))
+        else:
+            self.name = movimientos_result_dict[name.lower()]['Nombre']
+        
+        # Set the main statistics according to the nature of the pokemon
+        self.form = movimientos_result_dict[self.name]['Movimiento']
+        self.type = movimientos_result_dict[self.name]['Tipo']
+        self.power_points = int(movimientos_result_dict[self.name]['PP'])
+        self.damage = movimientos_result_dict[self.name]['Damage']
+        self.efect = movimientos_result_dict[self.name]['Efecto']    
+
+        if movimientos_result_dict[self.name]['Precision'].isnumeric():
+            self.precision = int(movimientos_result_dict[self.name]['Precision'])
+        else:
+            self.precision = movimientos_result_dict[self.name]['Precision']
 
 
 
@@ -269,10 +308,16 @@ if __name__ == "__main__":
     
     user = int(input("Type 1 to create a random pokemon or 2 to acces the damage calculator>>>"))
     if user == 1:
-        pokemon = random_pokemon()
+        pokemon = create_pokemon()
         print(pokemon)
     elif user == 2:
-        print(daño_pokemon())
+        print("***ATTACKING POKEMON***")
+        mon_attacking = create_pokemon()
+
+        print("***DEFENDING POKEMON***")
+        mon_defending = create_pokemon()
+
+        batalla_pokemon(mon_attacking, mon_defending)
     
     
     
