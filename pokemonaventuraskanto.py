@@ -76,7 +76,7 @@ def calculo_daño_pokemon(mon_attacking, mon_defending, move, dados):
                 total_damage *= int(component[0])
 
     # Determine STAB
-    tipo_movimiento = movimientos_result_dict[move.lower()]['Tipo']
+    tipo_movimiento = movimientos_result_dict[move.lower()]['Tipo'].strip()
     if tipo_movimiento == mon_attacking.type1 or tipo_movimiento == mon_attacking.type2:
         total_damage += 1 + mon_attacking.level // 10
 
@@ -92,6 +92,16 @@ def calculo_daño_pokemon(mon_attacking, mon_defending, move, dados):
     if mon_defending.type2:
         total_damage *= tipos_pokemon.get(tipo_movimiento).get(mon_defending.type2)
 
+    # add attacker stats and substract defender stats
+    clase_movimiento = movimientos_result_dict[move.lower()]['Movimiento'].strip()
+    if clase_movimiento == "Fisico":
+        total_damage += mon_attacking.attack // 10
+        total_damage -= mon_defending.defense // 10
+    elif clase_movimiento == "Especial":
+        total_damage += mon_attacking.special_attack // 10
+        total_damage -= mon_defending.special_defense // 10
+
+    
     
     print("nivel del pokemon:",mon_attacking.level)
     return total_damage
