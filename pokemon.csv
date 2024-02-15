@@ -1,181 +1,185 @@
-Pokemon;Numero;ID;Ataque;At. Esp;Defensa;Def. Esp;Velocidad;Pts. Salud;Pts. Poder;Mejora de Salud;Mejora de Poder;Tipo 1;Tipo 2
-bulbasaur;1;1;49;65;49;65;45;45;23;BI;B;Planta;Veneno
-ivysaur;2;2;62;80;63;80;60;60;38;BA;I;Planta;Veneno
-venusaur;3;3;82;100;83;100;80;80;57;2A;A;Planta;Veneno
-charmander;4;4;52;60;43;50;65;39;20;BI;B;Fuego;
-charmeleon;5;5;64;80;58;65;80;58;35;BA;I;Fuego;
-charizard;6;6;84;109;78;85;100;75;56;2A;A;Fuego;
-squirtle;7;7;48;50;65;64;43;44;20;BI;B;Agua;
-wartortle;8;8;63;65;80;80;58;59;35;BA;I;Agua;
-blastoise;9;9;83;85;100;105;78;79;52;2A;A;Agua;
-caterpie;10;10;30;20;35;20;45;45;16;BI;B;Bicho;
-metapod;11;11;20;25;55;25;30;50;26;BA;B;Bicho;
-butterfree;12;12;45;90;50;80;70;60;41;BA;I;Bicho;Volador
-weedle;13;13;35;20;30;20;50;40;16;BI;B;Bicho;Veneno
-kakuna;14;14;25;25;50;25;35;45;26;BA;B;Bicho;Veneno
-beedrill;15;15;90;45;40;80;75;65;42;BA;I;Bicho;Veneno
-pidgey;16;16;45;35;40;35;56;40;18;BI;B;Normal;Volador
-pidgeotto;17;17;60;50;55;50;70;63;33;BA;I;Normal;Volador
-pidgeot;18;18;80;70;75;70;101;83;50;2A;A;Normal;Volador
-rattata;19;19;56;25;35;35;72;30;27;BI;B;Normal;
-rattata alola;19;20;56;25;35;35;72;30;27;BI;B;Siniestro;Normal
-raticate;20;21;81;50;60;70;97;55;46;BA;I;Normal;
-raticate alola;20;22;70;40;70;80;77;75;46;BA;I;Siniestro;Normal
-spearow;21;23;60;31;30;31;70;40;12;BI;B;Normal;Volador
-fearow;22;24;90;61;65;61;100;65;29;BA;I;Normal;Volador
-ekans;23;25;60;40;44;54;55;35;14;BI;B;Veneno;
-arbok;24;26;95;65;69;79;80;60;37;BA;I;Veneno;
-pikachu;25;27;55;50;40;50;90;35;21;BI;B;Electrico;
-raichu;26;28;90;90;55;80;110;60;40;BA;I;Electrico;
-raichu alola;26;29;85;95;50;85;110;60;40;BA;I;Electrico;Psiquico
-sandshrew;27;30;75;20;85;30;40;50;22;BI;B;Tierra;
-sandshrew alola;27;31;75;10;90;35;40;50;23;BI;B;Hielo;Acero
-sandslash;28;32;100;45;110;55;65;75;37;BA;I;Tierra;
-sandslash alola;28;33;100;25;120;65;65;75;41;BA;I;Hielo;Acero
-nidoranf;29;34;47;40;52;40;41;55;13;BI;B;Veneno;
-nidorina;30;35;62;55;67;55;56;70;28;BA;I;Veneno;
-nidoqueen;31;36;92;75;87;85;76;90;46;2A;A;Veneno;Tierra
-nidoranm;32;37;57;40;40;40;50;46;13;BI;B;Veneno;
-nidorino;33;38;72;55;57;55;65;61;25;BA;I;Veneno;
-nidoking;34;39;102;85;77;75;85;81;45;2A;A;Veneno;Tierra
-clefairy;35;40;45;60;48;65;35;70;22;BI;B;Hada;
-clefable;36;41;70;95;73;90;60;95;37;BA;I;Hada;
-vulpix;37;42;41;50;40;65;65;38;22;BI;B;Fuego;
-vulpix alola;37;43;41;50;40;65;65;38;25;BI;B;Hielo;
-ninetales;38;44;76;81;75;100;100;73;39;BA;I;Fuego;
-ninetales alola;38;45;67;81;75;100;109;73;44;BA;I;Hielo;Hada
-jigglypuff;39;46;45;45;20;25;20;115;17;BI;B;Normal;Hada
-wigglytuff;40;47;70;85;45;50;45;140;34;BA;I;Normal;Hada
-zubat;41;48;45;30;35;40;55;40;169;BI;B;Veneno;Volador
-golbat;42;49;80;65;70;75;90;75;32;BA;I;Veneno;Volador
-oddish;43;50;50;75;55;65;30;45;25;BI;B;Planta;Veneno
-gloom;44;51;65;85;70;75;40;60;40;BA;I;Planta;Veneno
-vileplume;45;52;80;110;85;90;50;75;60;2A;A;Planta;Veneno
-paras;46;53;70;45;55;55;25;35;18;BI;B;Bicho;Planta
-parasect;47;54;95;60;80;80;30;60;33;BA;I;Bicho;Planta
-venonat;48;55;55;40;50;55;45;60;20;BI;B;Bicho;Veneno
-venomoth;49;56;65;90;60;75;90;70;38;BA;I;Bicho;Veneno
-diglett;50;57;55;35;25;45;95;10;24;BI;B;Tierra;
-diglett alola;50;58;55;35;30;45;90;10;25;BI;B;Tierra;Acero
-dugtrio;51;59;100;50;50;70;120;35;43;BA;I;Tierra;
-dugtrio alola;51;60;100;50;60;70;110;35;44;BA;I;Tierra;Acero
-meowth;52;61;45;40;35;40;90;40;14;BI;I;Normal;
-meowth alola;52;62;35;50;35;40;90;40;15;BI;B;Siniestro;
-meowth galar;52;63;65;40;55;40;40;50;14;BI;B;Acero;
-persian;53;64;70;65;60;65;115;65;30;BA;I;Normal;
-persian alola;53;65;60;75;60;65;115;65;31;BA;I;Siniestro;
-perrserker;863;66;110;50;100;60;50;70;32;BA;I;Acero;
-psyduck;54;67;52;65;48;50;55;50;18;BI;B;Agua;
-golduck;55;68;82;95;78;80;85;80;34;BA;I;Agua;
-mankey;56;69;80;35;35;45;70;40;17;BI;B;Lucha;
-primeape;57;70;105;60;60;70;95;65;32;BA;I;Lucha;
-growlithe;58;71;70;70;45;50;60;55;17;BI;B;Fuego;
-arcanine;59;72;110;100;80;80;95;90;38;BA;I;Fuego;
-poliwag;60;73;50;40;40;40;90;40;19;BI;B;Agua;
-poliwhirl;61;74;65;50;65;50;90;65;34;BA;I;Agua;
-poliwrath;62;75;95;70;95;90;70;90;50;2A;A;Agua;Lucha
-abra;63;76;20;105;15;55;90;25;30;BI;B;Psiquico;
-kadabra;64;77;35;120;30;70;105;40;54;BA;I;Psiquico;
-alakazam;65;78;50;135;45;95;120;55;69;2A;A;Psiquico;
-machop;66;79;80;35;50;35;35;70;18;BI;B;Lucha;
-machoke;67;80;100;50;70;60;45;80;33;BA;I;Lucha;
-machamp;68;81;130;65;80;85;55;90;48;2A;A;Lucha;
-bellsprout;69;82;75;70;35;30;40;50;14;BI;B;Planta;Veneno
-weepinbell;70;83;90;85;50;45;55;65;29;BA;I;Planta;Veneno
-victreebel;71;84;105;100;65;70;70;80;48;2A;A;Planta;Veneno
-tentacool;72;85;40;50;35;100;70;40;23;BI;B;Agua;Veneno
-tentacruel;73;86;70;80;65;120;100;80;40;BA;I;Agua;Veneno
-geodude;74;87;80;30;100;30;20;40;34;BI;B;Roca;Tierra
-geodude alola;74;88;80;30;100;30;20;40;35;BI;B;Roca;Electrico
-graveler;75;89;95;45;115;45;35;55;49;BA;I;Roca;Tierra
-graveler alola;75;90;95;45;115;45;35;55;50;BA;I;Roca;Electrico
-golem;76;91;120;55;130;65;45;80;64;2A;A;Roca;Tierra
-golem alola;76;92;120;55;130;65;45;80;65;2A;A;Roca;Electrico
-ponyta;77;93;85;65;55;65;90;50;18;BI;B;Fuego;
-ponyta galar;77;94;85;65;55;65;90;50;26;BI;B;Psiquico;
-rapidash;78;95;100;80;70;80;105;65;38;BA;I;Fuego;
-rapidash galar;78;96;100;80;70;80;105;65;46;BA;I;Psiquico;Hada
-slowpoke;79;97;65;40;65;40;15;90;26;BI;B;Agua;Psiquico
-slowpoke galar;79;98;65;40;65;40;15;90;26;BI;B;Psiquico;
-slowbro;80;99;75;100;110;80;30;95;41;BA;I;Agua;Psiquico
-slowbro galar;80;100;100;100;95;70;30;95;44;BA;I;Veneno;Psiquico
-magnemite;81;101;35;95;70;55;45;25;25;BI;B;Electrico;Acero
-magneton;82;102;60;120;95;70;70;50;42;BA;I;Electrico;Acero
-farfetch'd;83;103;90;58;55;62;60;52;26;BA;I;Normal;Volador
-farfetch'd galar;83;104;95;58;55;62;55;55;26;BA;I;Lucha;
-sirfetch'd;865;105;135;68;95;82;65;62;45;2A;A;Lucha;
-doduo;84;106;85;35;45;35;75;35;15;BI;B;Normal;Volador
-dodrio;85;107;110;60;70;60;100;60;32;BA;I;Normal;Volador
-seel;86;108;45;45;55;70;45;65;21;BI;B;Agua;
-dewgong;87;109;70;70;80;95;70;90;41;BA;I;Agua;Hielo
-grimer;88;110;80;40;50;50;25;80;16;BI;B;Veneno;
-grimer alola;88;111;80;40;50;50;25;80;18;BI;B;Veneno;Siniestro
-muk;89;112;105;65;75;100;50;105;31;BA;I;Veneno;
-muk alola;89;113;105;65;75;100;50;105;33;BA;I;Veneno;Siniestro
-shellder;90;114;65;45;100;25;40;30;16;BI;B;Agua;
-cloyster;91;115;95;85;180;45;70;50;35;BA;I;Agua;Hielo
-gastly;92;116;35;100;30;35;80;30;19;BI;B;Fantasma;Veneno
-haunter;93;117;50;115;45;55;95;45;34;BA;I;Fantasma;Veneno
-gengar;94;118;65;130;60;75;110;60;45;2A;A;Fantasma;Veneno
-onix;95;119;45;30;160;45;70;35;22;BA;I;Roca;Tierra
-drowzee;96;120;48;43;45;90;42;60;15;BI;B;Psiquico;
-hypno;97;121;73;73;70;115;67;85;30;BA;I;Psiquico;
-krabby;98;122;105;25;90;25;50;30;16;BI;B;Agua;
-kingler;99;123;130;50;115;50;75;55;31;BA;I;Agua;
-voltorb;100;124;30;55;50;55;100;40;32;BI;B;Electrico;
-electrode;101;125;50;80;70;80;150;60;47;BA;I;Electrico;
-exeggcute;102;126;40;60;80;45;40;60;25;BI;B;Planta;Psiquico
-exeggutor;103;127;95;125;85;75;55;95;46;BA;I;Planta;Psiquico
-exeggutor alola;103;128;105;125;85;75;45;95;47;BA;I;Planta;Dragon
-cubone;104;129;50;40;95;50;35;50;14;BI;B;Tierra;
-marowak;105;130;80;50;110;80;45;60;29;BA;I;Tierra;
-marowak alola;105;131;80;50;110;50;45;60;33;BA;I;Fuego;Fantasma
-hitmonlee;106;132;120;35;53;110;87;50;19;BA;I;Lucha;
-hitmonchan;107;133;105;35;79;110;76;50;20;BA;I;Lucha;
-lickitung;108;134;55;60;75;75;30;90;14;BA;I;Normal;
-koffing;109;135;65;60;95;45;35;40;26;BI;B;Veneno;
-weezing;110;136;90;85;120;70;60;65;46;BA;I;Veneno;
-weezing galar;110;137;90;85;120;70;60;65;48;BA;I;Veneno;Hada
-rhyhorn;111;138;85;30;95;30;25;80;28;BI;B;Tierra;Roca
-rhydon;112;139;130;45;120;45;40;105;43;BA;I;Tierra;Roca
-chansey;113;140;5;35;5;105;50;250;28;BA;I;Normal;
-tangela;114;141;55;100;115;40;60;65;17;BA;I;Planta;
-kangaskhan;115;142;95;40;80;80;90;105;20;BA;I;Normal;
-horsea;116;143;40;70;70;25;60;30;21;BI;B;Agua;
-seadra;117;144;65;95;95;45;85;55;36;BA;I;Agua;
-goldeen;118;145;67;35;60;50;63;45;16;BI;B;Agua;
-seaking;119;146;92;65;65;80;68;80;31;BA;I;Agua;
-staryu;120;147;45;70;55;55;85;30;25;BI;B;Agua;
-starmie;121;148;75;100;85;85;115;60;45;BA;I;Agua;Psiquico
-mr. mime;122;149;45;100;65;120;90;40;21;BA;I;Psiquico;Hada
-mr. mime galar;122;150;65;90;65;90;100;50;24;BA;I;Hielo;Psiquico
-mr. rime;866;151;85;110;75;100;70;80;39;2A;A;Hielo;Psiquico
-scyther;123;152;110;55;80;80;105;70;18;BA;I;Bicho;Volador
-jynx;124;153;50;115;35;95;95;65;16;BA;I;Hielo;Psiquico
-electabuzz;125;154;83;95;57;85;105;65;23;BA;I;Electrico;
-magmar;126;155;95;100;57;85;93;65;25;BA;I;Fuego;
-pinsir;127;156;125;55;100;70;85;65;18;BA;I;Bicho;
-tauros;128;157;100;40;95;70;110;75;20;BA;I;Normal;
-magikarp;129;158;10;15;55;20;80;20;11;BI;B;Agua;
-gyarados;130;159;125;60;79;100;81;95;31;BA;I;Agua;Volador
-lapras;131;160;85;85;80;95;60;130;25;BA;I;Agua;Hielo
-ditto;132;161;48;48;48;48;48;48;48;BA;I;Normal;
-eevee;133;162;55;45;50;65;55;55;15;BI;B;Normal;
-vaporeon;134;163;65;110;60;95;65;130;32;BA;I;Agua;
-jolteon;135;164;65;110;60;95;130;65;32;BA;I;Electrico;
-flareon;136;165;130;95;60;110;65;65;32;BA;I;Fuego;
-porygon;137;166;60;85;70;75;40;65;18;BI;B;Normal;
-omanyte;138;167;40;90;100;55;35;35;15;BI;B;Roca;Agua
-omastar;139;168;60;115;125;70;55;70;32;BA;I;Roca;Agua
-kabuto;140;169;80;55;90;45;55;30;13;BI;B;Roca;Agua
-kabutops;141;170;115;65;105;70;80;60;31;BA;I;Roca;Agua
-aerodactyl;142;171;105;60;65;75;130;80;24;BA;I;Roca;Volador
-snorlax;143;172;110;65;65;110;30;160;17;BA;I;Normal;
-articuno;144;173;85;95;100;125;85;90;57;2A;A;Hielo;Volador
-zapdos;145;174;90;125;85;90;100;90;53;2A;A;Electrico;Volador
-moltres;146;175;100;125;90;85;90;90;51;2A;A;Fuego;Volador
-dratini;147;176;64;50;45;50;50;41;20;BI;B;Dragon;
-dragonair;148;177;84;70;65;70;70;61;35;BA;I;Dragon;
-dragonite;149;178;134;100;95;100;80;91;63;2A;A;Dragon;Volador
-mewtwo;150;179;110;154;90;90;130;106;46;2A;A;Psiquico;
-mew;151;180;100;100;100;100;100;100;50;2A;A;Psiquico;
+Pokemon;Numero;ID;Ataque;At. Esp;Defensa;Def. Esp;Velocidad;Pts. Salud;Pts. Poder;Mejora de Salud;Mejora de Poder;Tipo 1;Tipo 2;Nivel;Naturaleza
+bulbasaur;1;1;49;65;49;65;45;45;23;BI;B;Planta;Veneno;5;
+ivysaur;2;2;62;80;63;80;60;60;38;BA;I;Planta;Veneno;5;
+venusaur;3;3;82;100;83;100;80;80;57;2A;A;Planta;Veneno;5;
+charmander;4;4;52;60;43;50;65;39;20;BI;B;Fuego;;5;
+charmeleon;5;5;64;80;58;65;80;58;35;BA;I;Fuego;;5;
+charizard;6;6;84;109;78;85;100;75;56;2A;A;Fuego;;5;
+squirtle;7;7;48;50;65;64;43;44;20;BI;B;Agua;;5;
+wartortle;8;8;63;65;80;80;58;59;35;BA;I;Agua;;5;
+blastoise;9;9;83;85;100;105;78;79;52;2A;A;Agua;;5;
+caterpie;10;10;30;20;35;20;45;45;16;BI;B;Bicho;;5;
+metapod;11;11;20;25;55;25;30;50;26;BA;B;Bicho;;5;
+butterfree;12;12;45;90;50;80;70;60;41;BA;I;Bicho;Volador;5;
+weedle;13;13;35;20;30;20;50;40;16;BI;B;Bicho;Veneno;5;
+kakuna;14;14;25;25;50;25;35;45;26;BA;B;Bicho;Veneno;5;
+beedrill;15;15;90;45;40;80;75;65;42;BA;I;Bicho;Veneno;5;
+pidgey;16;16;45;35;40;35;56;40;18;BI;B;Normal;Volador;5;
+pidgeotto;17;17;60;50;55;50;70;63;33;BA;I;Normal;Volador;5;
+pidgeot;18;18;80;70;75;70;101;83;50;2A;A;Normal;Volador;5;
+rattata;19;19;56;25;35;35;72;30;27;BI;B;Normal;;5;
+rattata alola;19;20;56;25;35;35;72;30;27;BI;B;Siniestro;Normal;5;
+raticate;20;21;81;50;60;70;97;55;46;BA;I;Normal;;5;
+raticate alola;20;22;70;40;70;80;77;75;46;BA;I;Siniestro;Normal;5;
+spearow;21;23;60;31;30;31;70;40;12;BI;B;Normal;Volador;5;
+fearow;22;24;90;61;65;61;100;65;29;BA;I;Normal;Volador;5;
+ekans;23;25;60;40;44;54;55;35;14;BI;B;Veneno;;5;
+arbok;24;26;95;65;69;79;80;60;37;BA;I;Veneno;;5;
+pikachu;25;27;55;50;40;50;90;35;21;BI;B;Electrico;;5;
+raichu;26;28;90;90;55;80;110;60;40;BA;I;Electrico;;5;
+raichu alola;26;29;85;95;50;85;110;60;40;BA;I;Electrico;Psiquico;5;
+sandshrew;27;30;75;20;85;30;40;50;22;BI;B;Tierra;;5;
+sandshrew alola;27;31;75;10;90;35;40;50;23;BI;B;Hielo;Acero;5;
+sandslash;28;32;100;45;110;55;65;75;37;BA;I;Tierra;;5;
+sandslash alola;28;33;100;25;120;65;65;75;41;BA;I;Hielo;Acero;5;
+nidoranf;29;34;47;40;52;40;41;55;13;BI;B;Veneno;;5;
+nidorina;30;35;62;55;67;55;56;70;28;BA;I;Veneno;;5;
+nidoqueen;31;36;92;75;87;85;76;90;46;2A;A;Veneno;Tierra;5;
+nidoranm;32;37;57;40;40;40;50;46;13;BI;B;Veneno;;5;
+nidorino;33;38;72;55;57;55;65;61;25;BA;I;Veneno;;5;
+nidoking;34;39;102;85;77;75;85;81;45;2A;A;Veneno;Tierra;5;
+clefairy;35;40;45;60;48;65;35;70;22;BI;B;Hada;;5;
+clefable;36;41;70;95;73;90;60;95;37;BA;I;Hada;;5;
+vulpix;37;42;41;50;40;65;65;38;22;BI;B;Fuego;;5;
+vulpix alola;37;43;41;50;40;65;65;38;25;BI;B;Hielo;;5;
+ninetales;38;44;76;81;75;100;100;73;39;BA;I;Fuego;;5;
+ninetales alola;38;45;67;81;75;100;109;73;44;BA;I;Hielo;Hada;5;
+jigglypuff;39;46;45;45;20;25;20;115;17;BI;B;Normal;Hada;5;
+wigglytuff;40;47;70;85;45;50;45;140;34;BA;I;Normal;Hada;5;
+zubat;41;48;45;30;35;40;55;40;169;BI;B;Veneno;Volador;5;
+golbat;42;49;80;65;70;75;90;75;32;BA;I;Veneno;Volador;5;
+oddish;43;50;50;75;55;65;30;45;25;BI;B;Planta;Veneno;5;
+gloom;44;51;65;85;70;75;40;60;40;BA;I;Planta;Veneno;5;
+vileplume;45;52;80;110;85;90;50;75;60;2A;A;Planta;Veneno;5;
+paras;46;53;70;45;55;55;25;35;18;BI;B;Bicho;Planta;5;
+parasect;47;54;95;60;80;80;30;60;33;BA;I;Bicho;Planta;5;
+venonat;48;55;55;40;50;55;45;60;20;BI;B;Bicho;Veneno;5;
+venomoth;49;56;65;90;60;75;90;70;38;BA;I;Bicho;Veneno;5;
+diglett;50;57;55;35;25;45;95;10;24;BI;B;Tierra;;5;
+diglett alola;50;58;55;35;30;45;90;10;25;BI;B;Tierra;Acero;5;
+dugtrio;51;59;100;50;50;70;120;35;43;BA;I;Tierra;;5;
+dugtrio alola;51;60;100;50;60;70;110;35;44;BA;I;Tierra;Acero;5;
+meowth;52;61;45;40;35;40;90;40;14;BI;I;Normal;;5;
+meowth alola;52;62;35;50;35;40;90;40;15;BI;B;Siniestro;;5;
+meowth galar;52;63;65;40;55;40;40;50;14;BI;B;Acero;;5;
+persian;53;64;70;65;60;65;115;65;30;BA;I;Normal;;5;
+persian alola;53;65;60;75;60;65;115;65;31;BA;I;Siniestro;;5;
+perrserker;863;66;110;50;100;60;50;70;32;BA;I;Acero;;5;
+psyduck;54;67;52;65;48;50;55;50;18;BI;B;Agua;;5;
+golduck;55;68;82;95;78;80;85;80;34;BA;I;Agua;;5;
+mankey;56;69;80;35;35;45;70;40;17;BI;B;Lucha;;5;
+primeape;57;70;105;60;60;70;95;65;32;BA;I;Lucha;;5;
+growlithe;58;71;70;70;45;50;60;55;17;BI;B;Fuego;;5;
+arcanine;59;72;110;100;80;80;95;90;38;BA;I;Fuego;;5;
+poliwag;60;73;50;40;40;40;90;40;19;BI;B;Agua;;5;
+poliwhirl;61;74;65;50;65;50;90;65;34;BA;I;Agua;;5;
+poliwrath;62;75;95;70;95;90;70;90;50;2A;A;Agua;Lucha;5;
+abra;63;76;20;105;15;55;90;25;30;BI;B;Psiquico;;5;
+kadabra;64;77;35;120;30;70;105;40;54;BA;I;Psiquico;;5;
+alakazam;65;78;50;135;45;95;120;55;69;2A;A;Psiquico;;5;
+machop;66;79;80;35;50;35;35;70;18;BI;B;Lucha;;5;
+machoke;67;80;100;50;70;60;45;80;33;BA;I;Lucha;;5;
+machamp;68;81;130;65;80;85;55;90;48;2A;A;Lucha;;5;
+bellsprout;69;82;75;70;35;30;40;50;14;BI;B;Planta;Veneno;5;
+weepinbell;70;83;90;85;50;45;55;65;29;BA;I;Planta;Veneno;5;
+victreebel;71;84;105;100;65;70;70;80;48;2A;A;Planta;Veneno;5;
+tentacool;72;85;40;50;35;100;70;40;23;BI;B;Agua;Veneno;5;
+tentacruel;73;86;70;80;65;120;100;80;40;BA;I;Agua;Veneno;5;
+geodude;74;87;80;30;100;30;20;40;34;BI;B;Roca;Tierra;5;
+geodude alola;74;88;80;30;100;30;20;40;35;BI;B;Roca;Electrico;5;
+graveler;75;89;95;45;115;45;35;55;49;BA;I;Roca;Tierra;5;
+graveler alola;75;90;95;45;115;45;35;55;50;BA;I;Roca;Electrico;5;
+golem;76;91;120;55;130;65;45;80;64;2A;A;Roca;Tierra;5;
+golem alola;76;92;120;55;130;65;45;80;65;2A;A;Roca;Electrico;5;
+ponyta;77;93;85;65;55;65;90;50;18;BI;B;Fuego;;5;
+ponyta galar;77;94;85;65;55;65;90;50;26;BI;B;Psiquico;;5;
+rapidash;78;95;100;80;70;80;105;65;38;BA;I;Fuego;;5;
+rapidash galar;78;96;100;80;70;80;105;65;46;BA;I;Psiquico;Hada;5;
+slowpoke;79;97;65;40;65;40;15;90;26;BI;B;Agua;Psiquico;5;
+slowpoke galar;79;98;65;40;65;40;15;90;26;BI;B;Psiquico;;5;
+slowbro;80;99;75;100;110;80;30;95;41;BA;I;Agua;Psiquico;5;
+slowbro galar;80;100;100;100;95;70;30;95;44;BA;I;Veneno;Psiquico;5;
+magnemite;81;101;35;95;70;55;45;25;25;BI;B;Electrico;Acero;5;
+magneton;82;102;60;120;95;70;70;50;42;BA;I;Electrico;Acero;5;
+farfetch'd;83;103;90;58;55;62;60;52;26;BA;I;Normal;Volador;5;
+farfetch'd galar;83;104;95;58;55;62;55;55;26;BA;I;Lucha;;5;
+sirfetch'd;865;105;135;68;95;82;65;62;45;2A;A;Lucha;;5;
+doduo;84;106;85;35;45;35;75;35;15;BI;B;Normal;Volador;5;
+dodrio;85;107;110;60;70;60;100;60;32;BA;I;Normal;Volador;5;
+seel;86;108;45;45;55;70;45;65;21;BI;B;Agua;;5;
+dewgong;87;109;70;70;80;95;70;90;41;BA;I;Agua;Hielo;5;
+grimer;88;110;80;40;50;50;25;80;16;BI;B;Veneno;;5;
+grimer alola;88;111;80;40;50;50;25;80;18;BI;B;Veneno;Siniestro;5;
+muk;89;112;105;65;75;100;50;105;31;BA;I;Veneno;;5;
+muk alola;89;113;105;65;75;100;50;105;33;BA;I;Veneno;Siniestro;5;
+shellder;90;114;65;45;100;25;40;30;16;BI;B;Agua;;5;
+cloyster;91;115;95;85;180;45;70;50;35;BA;I;Agua;Hielo;5;
+gastly;92;116;35;100;30;35;80;30;19;BI;B;Fantasma;Veneno;5;
+haunter;93;117;50;115;45;55;95;45;34;BA;I;Fantasma;Veneno;5;
+gengar;94;118;65;130;60;75;110;60;45;2A;A;Fantasma;Veneno;5;
+onix;95;119;45;30;160;45;70;35;22;BA;I;Roca;Tierra;5;
+drowzee;96;120;48;43;45;90;42;60;15;BI;B;Psiquico;;5;
+hypno;97;121;73;73;70;115;67;85;30;BA;I;Psiquico;;5;
+krabby;98;122;105;25;90;25;50;30;16;BI;B;Agua;;5;
+kingler;99;123;130;50;115;50;75;55;31;BA;I;Agua;;5;
+voltorb;100;124;30;55;50;55;100;40;32;BI;B;Electrico;;5;
+electrode;101;125;50;80;70;80;150;60;47;BA;I;Electrico;;5;
+exeggcute;102;126;40;60;80;45;40;60;25;BI;B;Planta;Psiquico;5;
+exeggutor;103;127;95;125;85;75;55;95;46;BA;I;Planta;Psiquico;5;
+exeggutor alola;103;128;105;125;85;75;45;95;47;BA;I;Planta;Dragon;5;
+cubone;104;129;50;40;95;50;35;50;14;BI;B;Tierra;;5;
+marowak;105;130;80;50;110;80;45;60;29;BA;I;Tierra;;5;
+marowak alola;105;131;80;50;110;50;45;60;33;BA;I;Fuego;Fantasma;5;
+hitmonlee;106;132;120;35;53;110;87;50;19;BA;I;Lucha;;5;
+hitmonchan;107;133;105;35;79;110;76;50;20;BA;I;Lucha;;5;
+lickitung;108;134;55;60;75;75;30;90;14;BA;I;Normal;;5;
+koffing;109;135;65;60;95;45;35;40;26;BI;B;Veneno;;5;
+weezing;110;136;90;85;120;70;60;65;46;BA;I;Veneno;;5;
+weezing galar;110;137;90;85;120;70;60;65;48;BA;I;Veneno;Hada;5;
+rhyhorn;111;138;85;30;95;30;25;80;28;BI;B;Tierra;Roca;5;
+rhydon;112;139;130;45;120;45;40;105;43;BA;I;Tierra;Roca;5;
+chansey;113;140;5;35;5;105;50;250;28;BA;I;Normal;;5;
+tangela;114;141;55;100;115;40;60;65;17;BA;I;Planta;;5;
+kangaskhan;115;142;95;40;80;80;90;105;20;BA;I;Normal;;5;
+horsea;116;143;40;70;70;25;60;30;21;BI;B;Agua;;5;
+seadra;117;144;65;95;95;45;85;55;36;BA;I;Agua;;5;
+goldeen;118;145;67;35;60;50;63;45;16;BI;B;Agua;;5;
+seaking;119;146;92;65;65;80;68;80;31;BA;I;Agua;;5;
+staryu;120;147;45;70;55;55;85;30;25;BI;B;Agua;;5;
+starmie;121;148;75;100;85;85;115;60;45;BA;I;Agua;Psiquico;5;
+mr. mime;122;149;45;100;65;120;90;40;21;BA;I;Psiquico;Hada;5;
+mr. mime galar;122;150;65;90;65;90;100;50;24;BA;I;Hielo;Psiquico;5;
+mr. rime;866;151;85;110;75;100;70;80;39;2A;A;Hielo;Psiquico;5;
+scyther;123;152;110;55;80;80;105;70;18;BA;I;Bicho;Volador;5;
+jynx;124;153;50;115;35;95;95;65;16;BA;I;Hielo;Psiquico;5;
+electabuzz;125;154;83;95;57;85;105;65;23;BA;I;Electrico;;5;
+magmar;126;155;95;100;57;85;93;65;25;BA;I;Fuego;;5;
+pinsir;127;156;125;55;100;70;85;65;18;BA;I;Bicho;;5;
+tauros;128;157;100;40;95;70;110;75;20;BA;I;Normal;;5;
+magikarp;129;158;10;15;55;20;80;20;11;BI;B;Agua;;5;
+gyarados;130;159;125;60;79;100;81;95;31;BA;I;Agua;Volador;5;
+lapras;131;160;85;85;80;95;60;130;25;BA;I;Agua;Hielo;5;
+ditto;132;161;48;48;48;48;48;48;48;BA;I;Normal;;5;
+eevee;133;162;55;45;50;65;55;55;15;BI;B;Normal;;5;
+vaporeon;134;163;65;110;60;95;65;130;32;BA;I;Agua;;5;
+jolteon;135;164;65;110;60;95;130;65;32;BA;I;Electrico;;5;
+flareon;136;165;130;95;60;110;65;65;32;BA;I;Fuego;;5;
+porygon;137;166;60;85;70;75;40;65;18;BI;B;Normal;;5;
+omanyte;138;167;40;90;100;55;35;35;15;BI;B;Roca;Agua;5;
+omastar;139;168;60;115;125;70;55;70;32;BA;I;Roca;Agua;5;
+kabuto;140;169;80;55;90;45;55;30;13;BI;B;Roca;Agua;5;
+kabutops;141;170;115;65;105;70;80;60;31;BA;I;Roca;Agua;5;
+aerodactyl;142;171;105;60;65;75;130;80;24;BA;I;Roca;Volador;5;
+snorlax;143;172;110;65;65;110;30;160;17;BA;I;Normal;;5;
+articuno;144;173;85;95;100;125;85;90;57;2A;A;Hielo;Volador;5;
+zapdos;145;174;90;125;85;90;100;90;53;2A;A;Electrico;Volador;5;
+moltres;146;175;100;125;90;85;90;90;51;2A;A;Fuego;Volador;5;
+dratini;147;176;64;50;45;50;50;41;20;BI;B;Dragon;;5;
+dragonair;148;177;84;70;65;70;70;61;35;BA;I;Dragon;;5;
+dragonite;149;178;134;100;95;100;80;91;63;2A;A;Dragon;Volador;5;
+mewtwo;150;179;110;154;90;90;130;106;46;2A;A;Psiquico;;5;
+mew;151;180;100;100;100;100;100;100;50;2A;A;Psiquico;;5;
+bulbasaur de gary;1;181;94;92;112;110;90;66;29;BI;B;Planta;Veneno;9;Agitada
+rattata alola de gary;19;182;91;60;70;70;107;44;32;BI;B;Siniestro;Normal;7;Fuerte
+squirtle de mery;7;183;83;85;86;99;92;57;26;BI;B;Agua;;7;Activa
+pidgey de mery;16;184;80;70;75;70;91;53;24;BI;B;Normal;Volador;7;Fuerte

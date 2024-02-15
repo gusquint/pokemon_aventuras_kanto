@@ -40,10 +40,9 @@ def random_pokemon():
     mon=input("What is the pokemon? >>>")
     lvl=input("What level is the pokemon? >>>")
     naturaleza=input("What is the nature of the pokemon? >>>")
-
     poke = Pokemon(mon, lvl, naturaleza)
-    poke.level_up()
-
+    if lvl != "self":
+        poke.level_up()
     return poke
 
 
@@ -101,19 +100,21 @@ def calculo_daño_pokemon(mon_attacking, mon_defending, move, dados):
         total_damage += mon_attacking.special_attack // 10
         total_damage -= mon_defending.special_defense // 10
 
-    
-    
-    print("nivel del pokemon:",mon_attacking.level)
     return total_damage
 
 
 def daño_pokemon():
     
-    mon_attacking = Pokemon(input("What pokemon is attacking? >>>"))
-    mon_defending = Pokemon(input("What pokemon is defending? >>>"))
+    print("***ATTACKING POKEMON***")
+    mon_attacking = random_pokemon()
+
+    print("***DEFENDING POKEMON***")
+    mon_defending = random_pokemon()
+
     move = input(f"What movement is {mon_attacking.name} using? >>>")
     dados = input("Toss 3d6 and type the results >>>")
     damage = calculo_daño_pokemon(mon_attacking, mon_defending, move, dados)
+
     return f"{mon_attacking.name} hits {mon_defending.name} using {move} for {damage} points of damage"
 
 
@@ -195,27 +196,41 @@ class Pokemon:
         if level == "":
             # Choose a random number between 5 and 100 if there is no level
             self.level = random.randint(5, 100)
+        elif level == "self":
+            # Set the level as the one registered in the csv file
+            self.level = int(pokemon_result_dict[name.lower()]['Nivel'])
         else:
             self.level = int(level) 
 
         if nature == "":
             # Choose a random nature if there is none
             self.nature = random.choice(list(natures.keys()))
+        elif level == "self":
+            # Set the nature as the one registered in the csv file
+            self.nature = pokemon_result_dict[name.lower()]['Naturaleza']
         else:
             self.nature = nature.capitalize()
         
         # Set the main statistics according to the nature of the pokemon
-        self.attack = int(pokemon_result_dict[self.name]['Ataque']) + stats_from_nature(self.nature, "Ataque")
-        self.special_attack = int(pokemon_result_dict[self.name]['At. Esp']) + stats_from_nature(self.nature, "At. Especial")
-        self.defense = int(pokemon_result_dict[self.name]['Defensa']) + stats_from_nature(self.nature, "Defensa")
-        self.special_defense = int(pokemon_result_dict[self.name]['Def. Esp']) + stats_from_nature(self.nature, "Def. Especial")
-        self.speed = int(pokemon_result_dict[self.name]['Velocidad']) + stats_from_nature(self.nature, "Velocidad")
+        self.attack = int(pokemon_result_dict[self.name]['Ataque']) 
+        self.special_attack = int(pokemon_result_dict[self.name]['At. Esp'])
+        self.defense = int(pokemon_result_dict[self.name]['Defensa'])
+        self.special_defense = int(pokemon_result_dict[self.name]['Def. Esp'])
+        self.speed = int(pokemon_result_dict[self.name]['Velocidad'])
         self.health_points = int(pokemon_result_dict[self.name]['Pts. Salud'])
         self.power_points = int(pokemon_result_dict[self.name]['Pts. Poder'])
         self.health_upgrade = pokemon_result_dict[self.name]['Mejora de Salud']
         self.power_upgrade = pokemon_result_dict[self.name]['Mejora de Poder']
         self.type1 = pokemon_result_dict[self.name]['Tipo 1']
         self.type2 = pokemon_result_dict[self.name]['Tipo 2']
+
+        if level != "self":
+            self.attack += stats_from_nature(self.nature, "Ataque")
+            self.special_attack += stats_from_nature(self.nature, "At. Especial")
+            self.defense += stats_from_nature(self.nature, "Defensa")
+            self.special_defense += stats_from_nature(self.nature, "Def. Especial")
+            self.speed += stats_from_nature(self.nature, "Velocidad")
+
 
     def __str__(self):
         return  f'''
@@ -225,6 +240,7 @@ Health points {self.health_points}.  Power points {self.power_points}.
 '''
 
     def level_up(self):
+
         for _ in range(self.level - 5):
             results=roll_three_dice()
 
@@ -253,7 +269,8 @@ if __name__ == "__main__":
     
     user = int(input("Type 1 to create a random pokemon or 2 to acces the damage calculator>>>"))
     if user == 1:
-        print(random_pokemon())
+        pokemon = random_pokemon()
+        print(pokemon)
     elif user == 2:
         print(daño_pokemon())
     
