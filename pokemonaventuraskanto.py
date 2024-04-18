@@ -43,7 +43,8 @@ def create_pokemon():
     naturaleza=input("What is the nature of the pokemon? >>>")
     poke = Pokemon(mon, lvl, naturaleza)
     if lvl != "self":
-        poke.level_up()
+        for _ in range(poke.level - 5):
+            poke.level_up()
     return poke
 
 
@@ -120,7 +121,7 @@ def batalla_pokemon(mon_attacking, mon_defending):
 
     # Print the result of the hit
     print(f"{mon_attacking.name} hits {mon_defending.name} using {move.name} for {damage} points of damage")
-    print("Here are the results of the battle so far: ")
+    print("***Results of the battle so far***")
     print(f"{mon_attacking.name} has {mon_attacking.health_points} HP and {mon_attacking.power_points} PP")
     print(f"{mon_defending.name} has {mon_defending.health_points} HP and {mon_defending.power_points} PP")
 
@@ -203,29 +204,48 @@ class Pokemon:
         file_path = 'pokemon.csv'  # Replace with the actual path to the CSV file
         pokemon_result_dict = read_csv_to_dict(file_path)
 
-        if name == "":
-            # Choose a random pokemon if there is none
-            self.name = random.choice(list(pokemon_result_dict.keys()))
-        else:
-            self.name = pokemon_result_dict[name.lower()]['Pokemon']
+        while True:
+            try: 
+                if name == "":
+                    # Choose a random pokemon if there is none
+                    self.name = random.choice(list(pokemon_result_dict.keys()))
+                else:
+                    self.name = pokemon_result_dict[name.lower()]['Pokemon']
+                break
+            except:
+                name = input(f"Please write a proper name or leave blank for a random one >>>")
 
-        if level == "":
-            # Choose a random number between 5 and 100 if there is no level
-            self.level = random.randint(5, 100)
-        elif level == "self":
-            # Set the level as the one registered in the csv file
-            self.level = int(pokemon_result_dict[name.lower()]['Nivel'])
-        else:
-            self.level = int(level) 
+        while True:
+            try:
+                if level == "":
+                    # Choose a random number between 5 and 100 if there is no level
+                    self.level = random.randint(5, 100)
+                elif level == "self":
+                    # Set the level as the one registered in the csv file
+                    self.level = int(pokemon_result_dict[name.lower()]['Nivel'])
+                else:
+                    self.level = int(level) 
+                break
+            except:
+                level = input(f"Please write a number bigger than or equal to 5 or leave blank for a random one.  Use 'self' for the True level>>>")
 
-        if nature == "":
-            # Choose a random nature if there is none
-            self.nature = random.choice(list(natures.keys()))
-        elif level == "self":
-            # Set the nature as the one registered in the csv file
-            self.nature = pokemon_result_dict[name.lower()]['Naturaleza']
-        else:
-            self.nature = nature.capitalize()
+        while True:
+            try:
+                if nature == "":
+                    # Choose a random nature if there is none
+                    self.nature = random.choice(list(natures.keys()))
+                elif level == "self":
+                    # Set the nature as the one registered in the csv file
+                    self.nature = pokemon_result_dict[name.lower()]['Naturaleza']
+                else:
+                    if nature.capitalize() in natures:
+                        self.nature = nature.capitalize()   
+                    else:
+                        raise KeyError                 
+                break
+            except:
+                nature = input(f"Please write a proper nature or leave blank for a random one.  Use 'self' for the True nature>>>")
+
         
         # Set the main statistics according to the nature of the pokemon
         self.attack = int(pokemon_result_dict[self.name]['Ataque']) 
@@ -255,27 +275,26 @@ Attack {self.attack}.  Special attack {self.special_attack}.  Defence {self.defe
 Health points {self.health_points}.  Power points {self.power_points}.
 '''
 
-    def level_up(self):
+    def level_up(self, dados=""):
 
-        for _ in range(self.level - 5):
-            results=roll_three_dice()
+        results=roll_three_dice(dados)
 
-            if self.health_upgrade[0].isdigit():
-                # If the first character is a number, multiply it by the value of the letter
-                self.health_points += int(self.health_upgrade[0]) * results.get(self.health_upgrade[1])
-            else:
-                # If both characters are letters, add their values
-                self.health_points += results.get(self.health_upgrade[0]) + results.get(self.health_upgrade[1])
-            
-            # Then increase the power points value
-            self.power_points += results.get(self.power_upgrade)
+        if self.health_upgrade[0].isdigit():
+            # If the first character is a number, multiply it by the value of the letter
+            self.health_points += int(self.health_upgrade[0]) * results.get(self.health_upgrade[1])
+        else:
+            # If both characters are letters, add their values
+            self.health_points += results.get(self.health_upgrade[0]) + results.get(self.health_upgrade[1])
+        
+        # Then increase the power points value
+        self.power_points += results.get(self.power_upgrade)
 
-            # Then increase the main statistics according to the nature of the pokemon
-            self.attack += int(stats_from_nature(self.nature, "Ataque")/5)
-            self.special_attack += int(stats_from_nature(self.nature, "At. Especial")/5)
-            self.defense += int(stats_from_nature(self.nature, "Defensa")/5)
-            self.special_defense += int(stats_from_nature(self.nature, "Def. Especial")/5)
-            self.speed  += int(stats_from_nature(self.nature, "Velocidad")/5)
+        # Then increase the main statistics according to the nature of the pokemon
+        self.attack += int(stats_from_nature(self.nature, "Ataque")/5)
+        self.special_attack += int(stats_from_nature(self.nature, "At. Especial")/5)
+        self.defense += int(stats_from_nature(self.nature, "Defensa")/5)
+        self.special_defense += int(stats_from_nature(self.nature, "Def. Especial")/5)
+        self.speed  += int(stats_from_nature(self.nature, "Velocidad")/5)
 
 
 class Move:
@@ -288,7 +307,12 @@ class Move:
             # Choose a random move if there is none
             self.name = random.choice(list(movimientos_result_dict.keys()))
         else:
-            self.name = movimientos_result_dict[name.lower()]['Nombre']
+            while True:
+                try:
+                    self.name = movimientos_result_dict[name.lower()]['Nombre']
+                    break
+                except:
+                    name = input(f"Please write a proper movement >>>")
         
         # Set the main statistics according to the nature of the pokemon
         self.form = movimientos_result_dict[self.name]['Movimiento']
@@ -305,19 +329,36 @@ class Move:
 
 
 if __name__ == "__main__":
-    
-    user = int(input("Type 1 to create a random pokemon or 2 to acces the damage calculator>>>"))
-    if user == 1:
-        pokemon = create_pokemon()
-        print(pokemon)
-    elif user == 2:
-        print("***ATTACKING POKEMON***")
-        mon_attacking = create_pokemon()
+        
+    status = True
+    while status == True:
+        print("***MENU***")
+        print("Type 1 to create a random pokemon")
+        print("Type 2 to acces the damage calculator")
+        print("Type 3 to level up a pokemon")
+        print("Write salir to leave")
+        user = input(">>>")
+        if user == "1":
+            pokemon = create_pokemon()
+            print(pokemon)
+        elif user == "2":
+            print("***ATTACKING POKEMON***")
+            mon_attacking = create_pokemon()
 
-        print("***DEFENDING POKEMON***")
-        mon_defending = create_pokemon()
+            print("***DEFENDING POKEMON***")
+            mon_defending = create_pokemon()
 
-        batalla_pokemon(mon_attacking, mon_defending)
+            print("***TIME FOR BATTLE***")
+            batalla_pokemon(mon_attacking, mon_defending)
+        elif user == "3":
+            pokemon = create_pokemon()
+            dados = input("Toss 3d6 and type the results >>>")
+            pokemon.level_up(dados)
+            pokemon.level += 1
+            print(pokemon)
+        elif user.lower() == "salir":
+            print("Good bye")
+            status = False
     
     
     
